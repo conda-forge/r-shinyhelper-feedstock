@@ -14,9 +14,9 @@ source:
   sha256: 07253bfed503585873a39f5fd8685fc8b102fceceb56978d6537fddbf6587cfc
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
-  skip: true  # [win32]
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,8 +44,7 @@ about:
   summary: Creates a lightweight way to add markdown helpfiles to 'shiny' apps, using modal dialog
     boxes, with no need to observe each help button separately.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
