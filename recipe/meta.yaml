@@ -1,4 +1,4 @@
-{% set version = '0.3.1' %}
+{% set version = "0.3.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,12 +11,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/shinyhelper_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/shinyhelper/shinyhelper_{{ version }}.tar.gz
-  sha256: 07253bfed503585873a39f5fd8685fc8b102fceceb56978d6537fddbf6587cfc
+  sha256: f7ed62543ab4d05a34b69a9183517a09e93e1b2da85b113282de0f9982db90b0
 
 build:
   noarch: generic
   merge_build_host: True  # [win]
-  number: 1001
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
