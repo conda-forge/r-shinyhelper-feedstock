@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-markdown
@@ -39,7 +40,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=shinyhelper
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Creates a lightweight way to add markdown helpfiles to 'shiny' apps, using modal dialog
     boxes, with no need to observe each help button separately.
   license_family: GPL3
