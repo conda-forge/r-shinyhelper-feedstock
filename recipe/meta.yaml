@@ -1,6 +1,5 @@
 {% set version = '0.3.2' %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-shinyhelper
@@ -13,8 +12,7 @@ source:
   sha256: f7ed62543ab4d05a34b69a9183517a09e93e1b2da85b113282de0f9982db90b0
 
 build:
-  merge_build_host: True  # [win]
-  number: 3
+  number: 4
   noarch: generic
   rpaths:
     - lib/R/lib/
